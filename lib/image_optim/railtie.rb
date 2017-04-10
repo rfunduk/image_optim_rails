@@ -22,7 +22,6 @@ class ImageOptim
     end
 
     initializer 'image_optim.initializer' do |app|
-      next if app.config.assets.compress == false
       next if app.config.assets.image_optim == false
 
       @image_optim = ImageOptim.new(options(app))
